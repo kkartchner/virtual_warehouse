@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Entry</title>
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/data_entry.css" rel="stylesheet" />
+    <script src="scripts/data_entry.js" async></script>
+    <script src="scripts/po_handling.js" async></script>
+</head>
+
+<body>
+    <table id="dataTable">
+        <thead>
+            <tr id="headerRow">
+                <td colspan="3">
+                    <select id="poNumberSelector">
+                        <option id="createNewPO">Create New</option>
+                    </select>
+                </td>
+                <td id="buttons" colspan="2">
+                    <button id="saveBtn">Save</button>
+                    <button id="printBtn">Print Stickers</button>
+                    <button id="deleteBtn">Delete</button>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Item Code</th>
+                <th>Item Description</th>
+                <th>Item Location</th>
+                <th>Bin Qty</th>
+                <th>Expiration Date</th>
+        </tbody>
+    </table>
+</body>
+
+</html>

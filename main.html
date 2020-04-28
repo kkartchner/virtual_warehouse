@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Visual Warehouse</title>
+    <link href="styles/base_style.css" rel="stylesheet" />
+    <link href="styles/reset.css" rel="stylesheet" />
+    <script src="scripts/whlayout.js" async></script>
+    <script src="scripts/main.js" async></script>
+    <script src="lib/jquery-3.4.1.min.js" async></script>
+    <script src="scripts/po_handling.js" async></script>
+</head>
+
+<body>
+    <table id="main">
+        <thead>
+            <tr>
+                <td>
+                    <select id="aisleSelector" multiple></select>
+                </td>
+                <td id="loadVisualBtns">
+                    <img src="images/copy.png" id="copyLocationsBtn" onclick="copyLocationsToClipboard();" 
+                    title="Copy selected locations" />
+                    <label id="loadFileLabel">
+                        <input id="loadFileBtn" type="file" />
+                        <img src="images/refresh.png" title="Load warehouse list info" />
+                    </label>
+                    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTwU4SNrplnXMHdWEoVsLHcC0HVuwsmx0GTYEVw1A0WKkQiRuHlgtI4q9vbZg5kF1ll1Evc90ZxbQhs/pub?gid=0&single=true&range=A2:A&output=csv"
+                        download="data.csv"><img src="images/download.png" title="Load item storage info" />
+                    </a>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <th>PO Number</th>
+                            <th>Item</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="poNumberSelector">
+                                    <option id="createNewPO">Create New</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="itemSelector">
+                                    <option id="addNewItem">Add New</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <button id="saveBtn">Save</button>
+                    <button id="deleteBtn">Delete</button>
+                    <button id="slotItemBtn">Slot Item</button>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4" id="visualDisplay">
+            </tr>
+        </tbody>
+    </table>
+
+</html>

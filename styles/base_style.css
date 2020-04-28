@@ -1,0 +1,60 @@
+table#main {
+    width: 85%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid black;
+}
+table#main tr {
+    width: 100%;
+}
+table#main > thead > tr td {
+    width: 25%;
+    text-align: right;
+    padding: 10px;
+}
+table#main > thead > tr td#loadVisualBtns {
+    text-align: left;
+}
+td#visualDisplay h1 {
+    padding-top: 15px;
+}
+select#aisleSelector {
+    width: 100%;
+}
+table.visual {
+    margin: 20px 0px 10px 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.visual td {
+    border: 1px solid orange;
+    width: 2.27%;
+    height: 20px;
+}
+table.visual td.filled {
+    background-color: darkgray;
+}
+table.visual td.selected {
+    background-color: blue;
+}
+table.visual td.empty {
+    background-color: white;
+}
+
+table.visual td.sepAisle {
+    border: none;
+}
+select#poNumberSelector {
+    width: 150px;
+}
+select#itemSelector {
+    width: 150px;
+}
+
+input[type='file'] {
+    opacity: 0;
+    position: absolute;
+    top: -1000px;
+}

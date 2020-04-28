@@ -1,0 +1,44 @@
+/* Print Page Styles */
+table.page {
+    page-break-after: always;
+    break-before: always;
+    padding: 0px;
+    border-collapse: collapse;
+    margin: 0px auto;
+}
+
+td.sticker {
+    width: 5.5in;
+    height: 4.2in;
+    border: 1px solid black;
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+span {
+    display: block;
+    padding: 5px;
+}
+
+span.description {
+    font-size: 44pt;
+    font-family: Calibri;
+    font-weight: bold;
+}
+span.location {
+    font-size: 60pt;
+    font-family: Arial;
+    font-weight: bold;
+}
+span.expiration {
+    font-size: 60pt;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+div.qrCode {
+    width: 100%;
+    margin: 0 auto;
+}

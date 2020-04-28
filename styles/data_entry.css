@@ -1,0 +1,38 @@
+/* General Style */
+table {
+    padding: 0px;
+    border-collapse: collapse;
+    margin: 0px auto;
+}
+
+body {
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+/* Data Entry Styles */
+table#dataTable {
+    border: 1px solid black;
+    width: 100%;
+}
+table#dataTable th, table#dataTable td {
+    text-align: center;
+    border: 1px solid black;
+}
+input.itemCode, input.location, input.binQty  {
+    width: 75px;
+}
+input.description {
+    width: 270px;
+}
+table#dataTable tr#headerRow td {
+    padding: 20px;
+    text-align: left;
+    border: none;
+}
+table#dataTable tr#headerRow td#buttons {
+    text-align: right;
+}
+table#dataTable tr#headerRow select {
+    width: 200px;
+}

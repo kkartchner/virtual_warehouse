@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Slot Item</title>
+    <script>
+        function slotItem() {
+            let curPO = window.location.search.slice(1);
+            
+            let itemCodes = (localStorage.getItem(curPO+"itemCodes") === null) ? [] :
+                JSON.parse(localStorage[curPO+"itemCodes"]);
+            
+            let descriptions = (localStorage.getItem(curPO+"descriptions") === null) ? [] :
+                JSON.parse(localStorage[curPO+"descriptions"]);
+
+            let locations = (localStorage.getItem(curPO+"locations") === null) ? [] :
+                JSON.parse(localStorage[curPO+"locations"]);
+
+            let binQtys = (localStorage.getItem(curPO+"binQtys") === null) ? [] :
+                JSON.parse(localStorage[curPO+"binQtys"]);
+
+            let itemCode = document.getElementById("itemNum");
+            let itemDesc = document.getElementById("itemDesc");
+            let binQty = document.getElementById("binQty");
+
+            let selectedLocations = JSON.parse(localStorage.vwh_selectedLocations);
+            selectedLocations.forEach(bin => {
+                itemCodes.push(itemCode.value);
+                descriptions.push(itemDesc.value);
+                locations.push(bin);
+                binQtys.push(binQty.value);
+            });
+
+            localStorage.setItem(curPO+"itemCodes", JSON.stringify(itemCodes));
+            localStorage.setItem(curPO+"descriptions", JSON.stringify(descriptions));
+            localStorage.setItem(curPO+"locations", JSON.stringify(locations));
+            localStorage.setItem(curPO+"binQtys", JSON.stringify(binQtys));
+
+            window.close();
+            window.open("../PLPGenerator/data_entry.html");
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Item Num</th>
+            <td><input type="text" id="itemNum" /></td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td><input type="text" id="itemDesc" /></td>
+        </tr>
+        <tr>
+            <th>Bin Qty</th>
+            <td><input type="text" id="binQty" /></td>
+        </tr>
+        <tr>
+            <td><button id="slotConfirmBtn" onclick="slotItem();">Okay</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
